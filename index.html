@@ -45,14 +45,14 @@
     .brand{
       display:flex; align-items:center; gap:12px;
       text-decoration:none;
-.logo-img{
-  height:64px;          /* vorher 42px */
-  width:auto;
-  display:block;
-}
-@media (max-width: 520px){
-  .logo-img{ height:52px; }
-}
+    .logo-img{
+      height:64px;          /* vorher 42px */
+      width:auto;
+      display:block;
+    }
+    @media (max-width: 520px){
+      .logo-img{ height:52px; }
+    }
     .brand strong{display:block; font-size:14px; letter-spacing:.3px}
     .brand span{display:block; font-size:12px; color:var(--veda-muted)}
     .pill{
@@ -353,7 +353,7 @@
         <div class="cta-row">
           <a class="btn btn-primary" href="#kaufen">Jetzt Angebot sichern</a>
           <a class="btn" href="https://veda.ch/agni-plus-tee-bio" target="_blank" rel="noopener">Produktseite öffnen</a>
-          <a class="btn" href="#b2b">B2B Konditionen</a>
+          <a class="btn" href="#b2b-anchor" data-open-tab="b2b">B2B Konditionen</a>
         </div>
 
         <p class="fine">
@@ -387,10 +387,11 @@
           </div>
 
           <div class="review">
-            <div class="stars" aria-label="Bewertung">★★★★★</div>
-            <b>Kundenbewertungen vorhanden</b>
-            <small>Auf der Produktseite unter „Reviews“ einsehbar.</small>
-          </div>
+  <div class="stars" aria-label="Bewertung">★★★★★</div>
+  <b>Sehr beliebt bei Kund:innen</b>
+  <small>„Angenehm würzig – trinke ihn gern nach dem Essen.“</small>
+</div>
+
         </div>
       </aside>
     </section>
@@ -468,6 +469,7 @@
 
         <!-- B2B -->
         <div class="panelwrap" id="panel-b2b" role="tabpanel" aria-labelledby="tab-b2b" hidden>
+		<div id="b2b-anchor" style="position:relative; top:-12px;"></div>
           <p class="fine">
             Für Wiederverkäufer, Therapeut:innen, Studios, Hotels, Firmen. Maximaler Rabatt: 60% (auf CHF 7.50).
           </p>
@@ -567,6 +569,22 @@
       panelB2C.hidden = !b2c;
       panelB2B.hidden = b2c;
     }
+	// Open tab if link requests it
+document.querySelectorAll('a[data-open-tab]').forEach(a => {
+  a.addEventListener('click', (e) => {
+    const tab = a.getAttribute('data-open-tab');
+    if (tab === 'b2b') selectTab('b2b');
+    if (tab === 'b2c') selectTab('b2c');
+
+    // allow DOM to update (panel becomes visible) then scroll
+    const href = a.getAttribute('href');
+    const target = document.querySelector(href);
+    if (target){
+      e.preventDefault();
+      setTimeout(() => target.scrollIntoView({behavior:'smooth', block:'start'}), 30);
+    }
+  });
+});
     tabB2C.addEventListener('click', () => selectTab('b2c'));
     tabB2B.addEventListener('click', () => selectTab('b2b'));
 
@@ -583,5 +601,3 @@
   </script>
 </body>
 </html>
-
-
