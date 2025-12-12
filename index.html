@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agni Plus Tee Bio – Sonderaktion | veda.ch</title>
+  <meta name="description" content="Agni Plus Tee Bio – würzig-wärmender Gewürztee. Sonderaktion CHF 6.00 statt CHF 7.50. B2C-Bundles & B2B-Staffelpreise." />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Optional: falls ihr eigene Webfonts habt, hier einbinden -->
+  <style>
+    :root{
+      /* CI-nahe (Grün/Gold/ruhiges Off-White) */
+      --veda-green:#2f6f4e;
+      --veda-green-2:#245a3f;
+      --veda-gold:#b7954a;
+      --veda-ink:#1c2320;
+      --veda-muted:#5c6b63;
+      --veda-bg:#fbfaf7;
+      --veda-card:#ffffff;
+      --veda-line:rgba(28,35,32,.10);
+      --shadow: 0 10px 30px rgba(28,35,32,.10);
+      --radius: 18px;
+      --radius-sm: 12px;
+      --max: 1100px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--veda-ink);
+      background: radial-gradient(1200px 700px at 20% -10%, rgba(47,111,78,.10), transparent 60%),
+                  radial-gradient(1000px 600px at 90% 10%, rgba(183,149,74,.10), transparent 55%),
+                  var(--veda-bg);
+      line-height:1.5;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding: 22px 18px 70px;}
+    .topbar{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:12px; padding: 10px 0 22px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      text-decoration:none;
+    }
+    .logo{
+      width:40px;height:40px;border-radius:12px;
+      background: linear-gradient(135deg, rgba(47,111,78,.15), rgba(183,149,74,.20));
+      border:1px solid var(--veda-line);
+      display:grid; place-items:center;
+      color:var(--veda-green);
+      font-weight:700;
+      letter-spacing:.5px;
+    }
+    .brand strong{display:block; font-size:14px; letter-spacing:.3px}
+    .brand span{display:block; font-size:12px; color:var(--veda-muted)}
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--veda-line);
+      background: rgba(255,255,255,.7);
+      backdrop-filter: blur(6px);
+      font-size: 12px;
+      color: var(--veda-muted);
+      white-space:nowrap;
+    }
+    .pill b{color:var(--veda-green)}
+    .hero{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:18px;
+      align-items:stretch;
+      margin-top: 10px;
+    }
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr}
+    }
+    .card{
+      background: var(--veda-card);
+      border: 1px solid var(--veda-line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .hero-left{padding: 26px 22px}
+    .kicker{
+      display:inline-flex; align-items:center; gap:10px;
+      font-size:12px; color:var(--veda-muted);
+      padding: 6px 10px;
+      border-radius:999px;
+      border:1px dashed rgba(47,111,78,.35);
+      background: rgba(47,111,78,.06);
+    }
+    .kicker .dot{
+      width:8px;height:8px;border-radius:50%;
+      background: var(--veda-gold);
+      box-shadow: 0 0 0 4px rgba(183,149,74,.12);
+    }
+    h1{
+      margin: 14px 0 10px;
+      font-size: clamp(28px, 3.4vw, 44px);
+      line-height:1.1;
+      letter-spacing: -0.5px;
+    }
+    .sub{
+      font-size: 16px;
+      color: var(--veda-muted);
+      margin: 0 0 18px;
+      max-width: 60ch;
+    }
+    .highlights{
+      display:flex; flex-wrap:wrap; gap:10px;
+      margin: 16px 0 18px;
+    }
+    .tag{
+      font-size: 12px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--veda-line);
+      background: rgba(251,250,247,.8);
+    }
+    .price-row{
+      display:flex; flex-wrap:wrap; gap:10px; align-items:end;
+      margin: 18px 0 18px;
+    }
+    .price{
+      font-size: 34px; font-weight: 750;
+      letter-spacing: -0.6px;
+      color: var(--veda-green);
+    }
+    .price small{
+      font-size: 14px; font-weight: 600; color: var(--veda-muted);
+      margin-left: 6px;
+    }
+    .was{
+      font-size: 14px; color: var(--veda-muted);
+    }
+    .was s{opacity:.75}
+    .cta-row{
+      display:flex; flex-wrap:wrap; gap:12px;
+      margin-top: 14px;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding: 12px 16px;
+      border-radius: 14px;
+      border: 1px solid var(--veda-line);
+      text-decoration:none;
+      font-weight: 650;
+      cursor:pointer;
+      transition: transform .06s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease;
+      user-select:none;
+    }
+    .btn:active{transform: translateY(1px)}
+    .btn-primary{
+      background: linear-gradient(135deg, var(--veda-green), var(--veda-green-2));
+      color: #fff;
+      border-color: rgba(47,111,78,.35);
+      box-shadow: 0 12px 24px rgba(47,111,78,.22);
+    }
+    .btn-primary:hover{box-shadow: 0 16px 30px rgba(47,111,78,.28)}
+    .btn-ghost{
+      background: rgba(251,250,247,.7);
+    }
+    .note{
+      margin-top: 12px;
+      font-size: 12px;
+      color: var(--veda-muted);
+    }
+
+    .hero-right{padding: 18px}
+    .panel{
+      border-radius: var(--radius);
+      border: 1px solid var(--veda-line);
+      background: linear-gradient(180deg, rgba(251,250,247,.85), rgba(255,255,255,.95));
+      padding: 16px;
+    }
+    .panel h3{margin: 0 0 10px; font-size: 16px}
+    .stats{
+      display:grid; grid-template-columns:1fr 1fr; gap:10px;
+    }
+    .stat{
+      border:1px solid var(--veda-line);
+      border-radius: 14px;
+      padding: 12px;
+      background:#fff;
+    }
+    .stat b{display:block; font-size: 16px; color: var(--veda-ink)}
+    .stat span{display:block; font-size:12px; color: var(--veda-muted)}
+    .review{
+      margin-top: 10px;
+      border:1px solid rgba(183,149,74,.25);
+      background: rgba(183,149,74,.10);
+      border-radius: 14px;
+      padding: 12px;
+    }
+    .review b{color: var(--veda-ink)}
+    .review .stars{color: var(--veda-gold); letter-spacing:1px; font-size: 13px}
+    .review small{display:block; color: var(--veda-muted); margin-top: 4px; font-size: 12px}
+
+    .section{
+      margin-top: 22px;
+      padding: 18px;
+    }
+    .section h2{
+      margin: 0 0 10px;
+      font-size: 22px;
+      letter-spacing: -0.2px;
+    }
+    .grid{
+      display:grid; grid-template-columns: 1fr 1fr 1fr;
+      gap:12px;
+      margin-top: 12px;
+    }
+    @media (max-width: 900px){
+      .grid{grid-template-columns:1fr}
+    }
+    .box{
+      border:1px solid var(--veda-line);
+      border-radius: var(--radius);
+      background: #fff;
+      padding: 14px;
+    }
+    .box h4{margin: 0 0 6px; font-size: 15px}
+    .box p{margin: 0; color: var(--veda-muted); font-size: 13px}
+    .tabs{
+      display:flex; gap:10px; flex-wrap:wrap;
+      margin-top: 14px;
+    }
+    .tab{
+      border-radius:999px;
+      border:1px solid var(--veda-line);
+      background: rgba(255,255,255,.7);
+      padding: 8px 12px;
+      font-weight: 650;
+      font-size: 13px;
+      cursor:pointer;
+    }
+    .tab[aria-selected="true"]{
+      background: rgba(47,111,78,.10);
+      border-color: rgba(47,111,78,.35);
+      color: var(--veda-green);
+    }
+    .tabpanels{margin-top: 12px}
+    .panelwrap{
+      border:1px solid var(--veda-line);
+      border-radius: var(--radius);
+      background:#fff;
+      padding: 16px;
+    }
+    .offers{
+      display:grid; grid-template-columns: 1fr 1fr 1fr;
+      gap:12px;
+      margin-top: 10px;
+    }
+    @media (max-width: 900px){ .offers{grid-template-columns:1fr} }
+    .offer{
+      border:1px solid var(--veda-line);
+      border-radius: var(--radius);
+      padding: 14px;
+      background: linear-gradient(180deg, #fff, rgba(251,250,247,.7));
+    }
+    .offer .title{
+      display:flex; align-items:baseline; justify-content:space-between; gap:8px;
+      margin-bottom: 6px;
+    }
+    .offer h3{margin:0; font-size: 15px}
+    .badge{
+      font-size: 11px;
+      padding: 4px 8px;
+      border-radius:999px;
+      border:1px solid rgba(183,149,74,.35);
+      background: rgba(183,149,74,.12);
+      color: #6c5530;
+      white-space:nowrap;
+    }
+    .offer .p{
+      font-size: 28px; font-weight: 800; color: var(--veda-green);
+      letter-spacing: -0.5px;
+      margin: 6px 0 4px;
+    }
+    .offer .per{
+      font-size: 12px; color: var(--veda-muted);
+      margin: 0 0 10px;
+    }
+    .offer ul{
+      margin: 0 0 12px 18px;
+      color: var(--veda-muted);
+      font-size: 13px;
+    }
+    .divider{
+      height:1px; background: var(--veda-line);
+      margin: 14px 0;
+    }
+    .fine{
+      font-size: 12px;
+      color: var(--veda-muted);
+      margin: 0;
+    }
+    .footer{
+      margin-top: 22px;
+      padding: 16px;
+      color: var(--veda-muted);
+      font-size: 12px;
+      display:flex; flex-wrap:wrap; gap:10px; justify-content:space-between;
+    }
+    .footer a{color: var(--veda-green); text-decoration:none}
+    .footer a:hover{text-decoration:underline}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <a class="brand" href="https://veda.ch/" target="_blank" rel="noopener">
+        <div class="logo">V</div>
+        <div>
+          <strong>veda.ch</strong>
+          <span>Schweizer Ayurveda Kompetenz seit 1986</span>
+        </div>
+      </a>
+      <div class="pill" title="Ablaufdatum: Juli 2026">
+        <span>Aktion wegen Lagerabbau</span> <b>3 Monate</b> · <span>mind. haltbar bis</span> <b>07/2026</b>
+      </div>
+    </div>
+
+    <section class="hero">
+      <div class="card hero-left">
+        <div class="kicker"><span class="dot"></span> Sonderaktion: schneller Lagerabbau – solange Vorrat</div>
+        <h1>Agni Plus Tee, Bio</h1>
+        <p class="sub">
+          Würzig-wärmender Kräuter- & Gewürztee mit Ingwer, Ceylon-Zimt, Kardamom, schwarzem Pfeffer & Nelken –
+          ideal nach üppigen Speisen. :contentReference[oaicite:1]{index=1}
+        </p>
+
+        <div class="highlights">
+          <span class="tag">15 Beutel / 22.5 g :contentReference[oaicite:2]{index=2}</span>
+          <span class="tag">97% Bewertung · 25 Reviews :contentReference[oaicite:3]{index=3}</span>
+          <span class="tag">Bio · IN-BIO-147 :contentReference[oaicite:4]{index=4}</span>
+          <span class="tag">Besonders fein mit Zitronensaft :contentReference[oaicite:5]{index=5}</span>
+        </div>
+
+        <div class="price-row" aria-label="Preis">
+          <div class="price">CHF 6.00 <small>pro Packung</small></div>
+          <div class="was">statt <s>CHF 7.50</s> (Normalpreis) :contentReference[oaicite:6]{index=6}</div>
+        </div>
+
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#kaufen">Jetzt Angebot sichern</a>
+          <a class="btn btn-ghost" href="https://veda.ch/agni-plus-tee-bio" target="_blank" rel="noopener">
+            Produktseite öffnen
+          </a>
+        </div>
+
+        <p class="note">
+          Hinweis: Die Aktion ist auf Lagerbestand ausgerichtet (3’500 Packungen). Lieferung & Zahlung wie gewohnt über veda.ch.
+        </p>
+      </div>
+
+      <aside class="card hero-right">
+        <div class="panel">
+          <h3>Warum Agni Plus?</h3>
+          <div class="stats">
+            <div class="stat">
+              <b>Wärmend</b>
+              <span>kräftig würzig, anregend</span>
+            </div>
+            <div class="stat">
+              <b>Alltagstauglich</b>
+              <span>1 Beutel · 5 Min ziehen lassen :contentReference[oaicite:7]{index=7}</span>
+            </div>
+            <div class="stat">
+              <b>Nach dem Essen</b>
+              <span>ideal nach üppigen Speisen :contentReference[oaicite:8]{index=8}</span>
+            </div>
+            <div class="stat">
+              <b>Bio Zutaten</b>
+              <span>Fenchel, Ingwer, Zimt, Kardamom… :contentReference[oaicite:9]{index=9}</span>
+            </div>
+          </div>
+
+          <div class="review">
+            <div class="stars" aria-label="Bewertung">★★★★★</div>
+            <b>97% positive Bewertung</b>
+            <small>Basierend auf 25 Kundenmeinungen. :contentReference[oaicite:10]{index=10}</small>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="card section" id="kaufen">
+      <h2>Kaufen: Privatkunden & Geschäftskunden</h2>
+      <p class="fine">
+        Für Endkunden sind 12er-Kartons oft zu viel – deshalb: B2C-Bundles + B2B-Staffelpreise (bis max. 60% Rabatt).
+      </p>
+
+      <div class="tabs" role="tablist" aria-label="Kundentyp wählen">
+        <button class="tab" id="tab-b2c" role="tab" aria-selected="true" aria-controls="panel-b2c">Privatkunden (B2C)</button>
+        <button class="tab" id="tab-b2b" role="tab" aria-selected="false" aria-controls="panel-b2b">Geschäftskunden (B2B)</button>
+      </div>
+
+      <div class="tabpanels">
+        <!-- B2C -->
+        <div class="panelwrap" id="panel-b2c" role="tabpanel" aria-labelledby="tab-b2c">
+          <p class="fine">
+            Ideal für den eigenen Vorrat oder als kleines Geschenk. Mindestens haltbar bis Juli 2026.
+          </p>
+
+          <div class="offers">
+            <div class="offer">
+              <div class="title">
+                <h3>Einzelpackung</h3>
+                <span class="badge">Schnell & einfach</span>
+              </div>
+              <div class="p">CHF 6.00</div>
+              <p class="per">CHF 6.00 / Packung</p>
+              <ul>
+                <li>Perfekt zum Testen</li>
+                <li>15 Beutel pro Packung :contentReference[oaicite:11]{index=11}</li>
+              </ul>
+              <a class="btn btn-primary" href="https://veda.ch/agni-plus-tee-bio" target="_blank" rel="noopener">Auf veda.ch kaufen</a>
+            </div>
+
+            <div class="offer">
+              <div class="title">
+                <h3>3er-Set</h3>
+                <span class="badge">Bestseller-Bundle</span>
+              </div>
+              <!-- 3 * 6.00 = 18.00; Bundle -10% = 16.20 -->
+              <div class="p">CHF 16.20</div>
+              <p class="per">CHF 5.40 / Packung (10% Bundle-Vorteil)</p>
+              <ul>
+                <li>Für 3–6 Wochen Genuss</li>
+                <li>Optimale Menge für Endkunden</li>
+              </ul>
+              <a class="btn btn-primary" href="https://veda.ch/agni-plus-tee-bio" target="_blank" rel="noopener">3er-Set sichern</a>
+              <p class="fine" style="margin-top:10px;">Preislogik: 3 × CHF 6.00 = 18.00, Bundle −10% = CHF 16.20.</p>
+            </div>
+
+            <div class="offer">
+              <div class="title">
+                <h3>6er-Set</h3>
+                <span class="badge">Vorrat</span>
+              </div>
+              <!-- 6 * 6.00 = 36.00; Bundle -15% = 30.60 -->
+              <div class="p">CHF 30.60</div>
+              <p class="per">CHF 5.10 / Packung (15% Bundle-Vorteil)</p>
+              <ul>
+                <li>Für Familien / Vieltrinker</li>
+                <li>Guter Preis pro Packung</li>
+              </ul>
+              <a class="btn btn-primary" href="https://veda.ch/agni-plus-tee-bio" target="_blank" rel="noopener">6er-Set sichern</a>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <p class="fine">
+            Tipp für Conversion: Nutzt diese Seite für Newsletter/Ads und leitet die Buttons auf den Warenkorb oder die Produktseite weiter.
+          </p>
+        </div>
+
+        <!-- B2B -->
+        <div class="panelwrap" id="panel-b2b" role="tabpanel" aria-labelledby="tab-b2b" hidden>
+          <p class="fine">
+            Für Wiederverkäufer, Therapeut:innen, Studios, Hotels, Firmen-Geschenke.
+            Staffelpreise sind so gewählt, dass der Rabatt <b>max. 60%</b> (bezogen auf CHF 7.50 Standardpreis) bleibt.
+          </p>
+
+          <div class="offers">
+            <div class="offer">
+              <div class="title">
+                <h3>12er Karton</h3>
+                <span class="badge">Einstieg</span>
+              </div>
+              <!-- 60% Rabatt auf 7.50 => 3.00 -->
+              <div class="p">CHF 36.00</div>
+              <p class="per">CHF 3.00 / Packung (−60% ggü. CHF 7.50)</p>
+              <ul>
+                <li>Ideal für kleine Shops / Praxen</li>
+                <li>Sehr gutes Abverkaufs-Preisniveau</li>
+              </ul>
+              <a class="btn btn-primary" href="https://proshop.veda.ch" target="_blank" rel="noopener">Im Proshop bestellen</a>
+            </div>
+
+            <div class="offer">
+              <div class="title">
+                <h3>48 Packungen</h3>
+                <span class="badge">Top Marge</span>
+              </div>
+              <div class="p">CHF 132.00</div>
+              <p class="per">CHF 2.75 / Packung</p>
+              <ul>
+                <li>Für Aktionen / Displays</li>
+                <li>Gut für Firmenkunden-Geschenke</li>
+              </ul>
+              <a class="btn btn-primary" href="https://proshop.veda.ch" target="_blank" rel="noopener">Im Proshop bestellen</a>
+            </div>
+
+            <div class="offer">
+              <div class="title">
+                <h3>120+ Packungen</h3>
+                <span class="badge">Liquidations-Deal</span>
+              </div>
+              <div class="p">CHF 300.00</div>
+              <p class="per">CHF 2.50 / Packung</p>
+              <ul>
+                <li>Für Ketten, Grossabnehmer, Events</li>
+                <li>Optional: Abholung / Palette (nach Absprache)</li>
+              </ul>
+              <a class="btn btn-primary" href="mailto:info@veda.ch?subject=Agni%20Plus%20Tee%20B2B%20Liquidationsangebot&body=Hallo%20veda.ch-Team%2C%0D%0A%0D%0AWir%20interessieren%20uns%20f%C3%BCr%20das%20B2B-Angebot%20Agni%20Plus%20Tee.%20Bitte%20sendet%20uns%20eine%20Offerte%20(%20Menge%2C%20Lieferung%2C%20Zahlung%20).%0D%0A%0D%0AFirma%3A%0D%0AKontakt%3A%0D%0AAdresse%3A%0D%0ATelefon%3A%0D%0AMenge%20gew%C3%BCnscht%3A%0D%0A%0D%0AVielen%20Dank!">
+                Offerte anfragen
+              </a>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <p class="fine">
+            Hinweis: Haltbarkeit bis 07/2026. Bitte B2B-Konditionen final mit eurem Proshop/ERP abgleichen (MwSt/Versand/Paletten).
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card section">
+      <h2>Produktdetails (kurz & klar)</h2>
+      <div class="grid">
+        <div class="box">
+          <h4>Zutaten</h4>
+          <p>Fenchelsamen*, Ingwer*, Ceylon-Zimt*, Kardamom*, schwarzer Pfeffer*, Gewürznelken* (*Bio). :contentReference[oaicite:12]{index=12}</p>
+        </div>
+        <div class="box">
+          <h4>Anwendung</h4>
+          <p>1 Beutel pro Tasse mit kochendem Wasser aufgiessen, 5 Min ziehen lassen; nach Wunsch Zitrone. :contentReference[oaicite:13]{index=13}</p>
+        </div>
+        <div class="box">
+          <h4>Warum jetzt?</h4>
+          <p>Lagerabbau-Aktion: 3’500 Packungen in 3 Monaten. Preisvorteile nur solange Vorrat.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer card">
+      <div>© 2025 AyurVeda AG · veda.ch</div>
+      <div>
+        <a href="https://veda.ch/agni-plus-tee-bio#reviews" target="_blank" rel="noopener">Reviews ansehen</a>
+        &nbsp;·&nbsp;
+        <a href="https://veda.ch/kontakt" target="_blank" rel="noopener">Kontakt</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Simple Tabs
+    const tabB2C = document.getElementById('tab-b2c');
+    const tabB2B = document.getElementById('tab-b2b');
+    const panelB2C = document.getElementById('panel-b2c');
+    const panelB2B = document.getElementById('panel-b2b');
+
+    function selectTab(which){
+      const b2c = which === 'b2c';
+      tabB2C.setAttribute('aria-selected', b2c ? 'true' : 'false');
+      tabB2B.setAttribute('aria-selected', b2c ? 'false' : 'true');
+      panelB2C.hidden = !b2c;
+      panelB2B.hidden = b2c;
+    }
+    tabB2C.addEventListener('click', () => selectTab('b2c'));
+    tabB2B.addEventListener('click', () => selectTab('b2b'));
+
+    // Smooth anchor
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', (e)=>{
+        const id = a.getAttribute('href');
+        const el = document.querySelector(id);
+        if(!el) return;
+        e.preventDefault();
+        el.scrollIntoView({behavior:'smooth', block:'start'});
+      });
+    });
+  </script>
+</body>
+</html>
